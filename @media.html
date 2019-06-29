@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta:vp [TAB] -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Title</title>
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="reset.min.css"/>
+    <style>
+        .box{
+            position: relative;
+  ..        box-sizing: border-box;
+            margin: 10px auto;
+            padding: 10px;
+            width: 800px;
+            height: 224px;
+            padding-left: 320px;
+            border: 2px dashed lightcoral;
+        }
+        .box img{
+            position: relative;
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+            width: 300px;
+            height: 218px;
+        }
+        .box p{
+            font-size: 18px;
+            line-height: 35px;
+        }
+        /*基于@media调节不同页面尺寸中，我们应该修改的样式*/
+        @media all and (max-width: 800px) {
+            /*当前页面宽度<=800px*/
+            .box {
+                width: 95%;
+            }
+        }
+            @media all and (max-width: 690px){
+                .box{
+                    height: 200px;
+                    padding-left: 260px;
+                }
+                .box img{
+                    width: 240px;
+                    height: 176px;
+                }
+                .box p{
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+         /*想要完成优质的效果我们只需要多设置@media，针对不同尺寸进行样式调整，虽然麻烦一些，但做出来的产品一定非常不错
+         =>@media是官方唯一指定的响应式布局解决方案
+         */
+
+    </style>
+</head>
+<body>
+<div class="box" >
+    <img src="./image/zhugeliang.png" alt="">
+    <P>夫君子之行，静以修身，俭以养德， 非淡泊无以明志，非宁静无以致远。 夫学须静也，才须学也，非学无以广才， 非志无以成学。 淫慢不能励精， 险躁则不能治性。 年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！  </P>
+
+</div>
+</body>
+</html>

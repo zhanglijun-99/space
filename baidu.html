@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- 设置标题和ICON图标 （快捷提示：link:favicon） -->
+    <title>百度图片</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"/>
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="./baidu.css"/>
+    <link rel="stylesheet" href="./reset.min.css">
+
+</head>
+<body>
+<!-- header -->
+<!-- header>(nav>a*14)+(section>img+(div>input+a*2)+(div>span+a*4))+(div>span+a) -->
+    <header class="headerBox">
+        <nav class="navBox">
+            <a href="https://www.baidu.com/">网页</a>
+            <a href="http://news.baidu.com/">新闻</a>
+            <a href="https://tieba.baidu.com/index.html">贴吧</a>
+            <a href="https://zhidao.baidu.com/">知道</a>
+            <a href="http://music.taihe.com/">音乐</a>
+            <a href="http://image.baidu.com/">图片</a>
+            <a href="http://v.baidu.com/">视频</a>
+            <a href="https://map.baidu.com/">地图</a>
+            <a href="https://wenku.baidu.com/">文库</a>
+            |
+            <a href="https://www.baidu.com/">百度首页</a>
+            <a href="javascript:;">登录</a>
+            <a href="https://passport.baidu.com/v2/?reg&regType=1&tpl=im&u=http%3A%2F%2Fimage.baidu.com%2F">注册</a>
+            <a href="javascript:;" title="请按CTAR+D收藏">收藏本页</a>
+            <a href="http://c-chain.baidu.com/eco/index?f=bdback#/" class="official">官方合作
+                <!--提示信息 -->
+
+                <div class= "tipBox">
+                    <i></i>
+                    <ul>
+                        <li>图腾</li>
+                        <li>图片版权合作平台</li>
+                    </ul>
+                </div>
+            </a>
+        </nav>
+        <!-- 搜索区域 -->
+        <section class="searchBox">
+            <img src="./image/logo.png" alt=""/>
+            <div class="form">
+                <input type="text"/>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>  <!--能跳转页面的不一定是超链接，还可能是基于JS实现的跳转 -->
+            </div>
+            <div class="hot">
+                <span>热门搜索</span>
+                <a href="https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context=%20%7B%22nid%22%3A%22news_10370965905328524727%22%2C%22sourceFrom%22%3A%22bjh%22%7D">百家摄影大赛</a>
+                <a href="http://c-chain.baidu.com/eco/index?f=bdback#/">图腾</a>
+                <a href="http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fr=&sf=1&fmq=1461834053046_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&itg=0&ie=utf-8&word=%E5%A4%B4%E5%83%8F#z=0&pn=&ic=0&st=-1&face=0&s=0&lm=-1">头像</a>
+                <a href="http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fr=&sf=1&fmq=1461834053046_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&itg=0&ie=utf-8&word=%E5%A4%B4%E5%83%8F#z=0&pn=&ic=0&st=-1&face=0&s=0&lm=-1">高清动漫</a>
+            </div>
+        </section>
+        <!--作者区域-->
+        <div class="cameraman">
+            <span>背景图片来源：</span>
+            <a href="" target="_blank">摄影师陈宇航</a>
+        </div>
+    </header>
+<!-- main -->
+<main class="mainBox">
+    <!-- 标题 -->
+    <h2>
+        精美图片
+        <div class="tab">
+        <a href="javascript:;" class="active">最热</a>
+        <a href="javascript:;">最新</a>
+        </div>
+    </h2>
+
+    <!-- 最热内容 {}设置内容 []设置属性 ()分组成为整体 $是数字从1累增 -->
+    <!-- ul>li*5(a>img[src='image/r$.jpg'])+(a>img[src='image/z$.jpg']+span{CathyWang})-->
+    <div class="imgList">
+        <ul>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E6%91%84%E5%BD%B1%E5%B8%88%E9%9F%A9%E6%B7%87&hs=0&pn=0&spn=0&di=0&pi=63144433365&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=1764997441%2C170542784&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8d5494eef01f3a29f863534d9725bc315d607c8e.jpg&fromurl=&gsm=0&catename=pcindexhot&islist=&querylist="><img src="./image/r1.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E6%91%84%E5%BD%B1%E5%B8%88%E9%9F%A9%E6%B7%87"><img src="./image/z1.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E6%91%84%E5%BD%B1%E5%B8%88%E7%89%9F%E6%B5%B7%E6%B3%A2&hs=0&pn=1&spn=0&di=0&pi=63246495373&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=1775590687%2C1277674512&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc75c10385343fbf23fff5baabe7eca8064388f6c.jpg&fromurl=&gsm=0&catename=pcindexhot&islist=&querylist="><img src="./image/r2%20.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E6%91%84%E5%BD%B1%E5%B8%88%E7%89%9F%E6%B5%B7%E6%B3%A2"><img src="./image/z2.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E6%91%84%E5%BD%B1%E5%B8%88%E5%AF%9Bgor&hs=0&pn=2&spn=0&di=0&pi=62906525732&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=2986789703%2C146228418&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F4034970a304e251fb1a2546da986c9177e3e53c9.jpg&fromurl=&gsm=0&catename=pcindexhot&islist=&querylist="><img src="./image/r3.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E6%91%84%E5%BD%B1%E5%B8%88%E5%AF%9Bgor"><img src="./image/z3.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E7%8E%8B%E4%B9%89%E5%8D%9A%E4%BD%9C%E5%93%81&hs=0&pn=3&spn=0&di=0&pi=42860072193&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=1635775129%2C499054354&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F32fa828ba61ea8d3fcd2e9ce9e0a304e241f5803.jpg&fromurl=&gsm=0&catename=pcindexhot&islist=&querylist="><img src="./image/r4.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E7%8E%8B%E4%B9%89%E5%8D%9A%E4%BD%9C%E5%93%81"><img src="./image/z4.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E7%AB%A5%E6%A2%A6&hs=0&pn=4&spn=0&di=0&pi=44082982964&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=4073846589%2C3085928938&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F4610b912c8fcc3cef70d70409845d688d53f20f7.jpg&fromurl=&gsm=&catename=pcindexhot&islist=&querylist="><img src="./image/r5.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E7%AB%A5%E6%A2%A6"><img src="./image/z5.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E8%82%96%E5%85%A8&hs=0&pn=5&spn=0&di=0&pi=44224719004&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=1569301697%2C174686899&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fdc54564e9258d1092f7663c9db58ccbf6c814d30.jpg&fromurl=&gsm=&catename=pcindexhot&islist=&querylist="><img src="./image/r6.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E8%82%96%E5%85%A8"><img src="./image/z6.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=Gyeonlee&hs=0&pn=6&spn=0&di=0&pi=44899878138&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=2920202476%2C3602111344&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F9922720e0cf3d7ca810f3732f81fbe096a63a9fd.jpg&fromurl=&gsm=&catename=pcindexhot&islist=&querylist="><img src="./image/r7.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=Gyeonlee"><img src="./image/z7.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E6%91%84%E5%BD%B1%E5%B8%88%E7%9F%B3%E8%80%80%E8%87%A3&hs=0&pn=7&spn=0&di=0&pi=45273135686&tn=baiduimagedetail&is=1%2C17742&ie=utf-8&oe=utf-8&cs=873970885%2C3141044368&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc2cec3fdfc03924590b2a9b58d94a4c27d1e2500.jpg&fromurl=&gsm=0&catename=pcindexhot&islist=&querylist="><img src="./image/r8.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E6%91%84%E5%BD%B1%E5%B8%88%E7%9F%B3%E8%80%80%E8%87%A3"><img src="./image/z8.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E6%91%84%E5%BD%B1%E5%B8%88%E9%83%9D%E6%98%8E%E6%B4%8B&hs=0&pn=8&spn=0&di=0&pi=45351039880&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=3716995867%2C1922460920&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F838ba61ea8d3fd1fc9c7b6853a4e251f94ca5f46.jpg&fromurl=&gsm=&catename=pcindexhot&islist=&querylist="><img src="./image/r9.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=d&istype=2&ie=utf-8&oe=utf-8&word=%E6%91%84%E5%BD%B1%E5%B8%88%E9%83%9D%E6%98%8E%E6%B4%8B"><img src="./image/z9.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E6%9E%AB%E9%97%B4%E9%9B%A8&hs=0&pn=9&spn=0&di=0&pi=45476143249&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=1353729562%2C4018761636&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg&fromurl=&gsm=0&catename=pcindexhot&islist=&querylist="><img src="./image/r10.jpg" alt=""></a>
+                <a href="https://image.baidu.com/search/detail?z=0&word=%E6%9E%AB%E9%97%B4%E9%9B%A8&hs=0&pn=9&spn=0&di=0&pi=45476143249&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cs=1353729562%2C4018761636&os=&simid=&adpicid=0&lpn=0&fm=&sme=&cg=&bdtype=-1&oriquery=&objurl=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg&fromurl=&gsm=0&catename=pcindexhot&islist=&querylist="><img src="./image/z10.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href=""><img src="./image/r11.jpg" alt=""></a>
+                <a href=""><img src="./image/z1.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/r12.jpg" alt=""></a>
+                <a href=""><img src="./image/z2.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/r13.jpg" alt=""></a>
+                <a href=""><img src="./image/z3.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/r14.jpg" alt=""></a>
+                <a href=""><img src="./image/z4.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/r15.jpg" alt=""></a>
+                <a href=""><img src="./image/z5.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 最新内容 -->
+    <div class="imgList">
+
+        <ul>
+            <li>
+                <a href=""><img src="./image/x1.jpg" alt=""></a>
+                <a href=""><img src="./image/z1.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x2.jpg" alt=""></a>
+                <a href=""><img src="./image/z2.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x3.jpg" alt=""></a>
+                <a href=""><img src="./image/z3.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x4.jpg" alt=""></a>
+                <a href=""><img src="./image/z4.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x5.jpg" alt=""></a>
+                <a href=""><img src="./image/z5.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href=""><img src="./image/x6.jpg" alt=""></a>
+                <a href=""><img src="./image/z6.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x7.jpg" alt=""></a>
+                <a href=""><img src="./image/z7.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x8.jpg" alt=""></a>
+                <a href=""><img src="./image/z8.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x9.jpg" alt=""></a>
+                <a href=""><img src="./image/z9.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x10.jpg" alt=""></a>
+                <a href=""><img src="./image/z10.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href=""><img src="./image/x11.jpg" alt=""></a>
+                <a href=""><img src="./image/z1.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x12.jpg" alt=""></a>
+                <a href=""><img src="./image/z2.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x13.jpg" alt=""></a>
+                <a href=""><img src="./image/z3.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+            <li>
+                <a href=""><img src="./image/x14.jpg" alt=""></a>
+                <a href=""><img src="./image/z4.jpg" alt="">
+                    <span>CathyWang</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</main>
+<!--footer -->
+<footer>
+    <span>@2019 Baidu</span>
+    <a href="">使用百度前必读</a>
+    <a href="">高级搜索</a>
+    <a href="">帮助</a>
+</footer>
+</body>
+</html>

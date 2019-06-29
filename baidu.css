@@ -1,0 +1,289 @@
+/*
+    * 初级玩家写样式：从最外层HTML开始写样式，一层层向里写，一个都别落下即可
+*/
+/*清空样式*/
+html, body {
+    /*
+     * CSS中颜色的表示法
+     *   1.单词表示  black/white
+     *   2.16进制表示  #000000(#000)/#FFF
+     *   3.RGB表示  rgb(0,0,0)/rgb(255,255,255)
+     *   4.HSL表示（色相、饱和度、亮度）
+     *   5.RGBA在RGB的基础上设置透明度(A:ALPHA) rgba(0,0,0,0.5)黑色半透明效果，透明度0（完全透明）~1（不透明）
+     */
+    background: #E4E4E4;
+}
+
+/*==HEADER==*/
+/*
+ * 命名规范：
+ *    使用数字、字母、下划线、$都可以
+ *    遵循驼峰命名法
+ *    严格区分大小写
+ */
+.headerBox {
+    /*
+     * background设置背景
+     *   background-color背景颜色
+     *   background-image:url('')背景图片
+     *   background-repeat是否平铺
+     *   background-size背景图的大小
+     *   background-position背景图的位置
+     */
+    height: 620px;
+    background: url("./image/header.jpg") no-repeat;
+    background-size: cover;
+}
+
+/*NAV导航*/
+.navBox {
+    background: rgba(0, 0, 0, .5);
+    /*控制文本水平对齐的方式： left\center\right,行标签可以当做文本来进行相关的处理*/
+    /*text-align: right;*/
+    /*font-size: 0;*/
+
+
+    /* 水平并排排列方案三：
+      给父容器设置FLEX后
+        1、容器中的子元素（FLEX-ITEM）都变成了块元素
+    */
+    display:flex;
+    justify-content: flex-end;
+
+
+}
+/*水平并排排列方案一：inline-block
+    问题：把元素作为行内标签处理，相当于把它看成了文字，这样的话
+    如果标签之间有空格或者换行，那么空格和换行一定会占据位置，导致间隙
+
+    解决; 让父容器的字体大小为零，这样所有的文本都不占位置（包括空格和换行），
+    在单独给需要呈现的文字设置字体大小即可
+    background: rgba(0, 0, 0, .5);）
+     font-size: 0;
+*/
+
+/*水平并排排列方案二：float浮动
+    设置为浮动的元素会变为块标签
+    问题：浮动的元素会脱离文档流（和其它元素不在相同平面上），这样导致如果其父元素没有固定的高度，
+    原来的元素又脱离这个平面，父元素的高度就不会被撑开，也就是父元素没有高度了
+
+    解决：设置clear：both ,在我们的reset.min.css中已经封装了一个公共的方法.clearfix来解决这个问题
+    （我们只要给父元素加上这个样式即可解决问题）
+*/
+.navBox > a,
+.navBox> span{
+    /*float: right;*/
+    /*display: inline-block;*/
+    padding:0 10px;
+    height:32px;
+    line-height: 32px;
+    font-size:14px;
+    color:#FFF;
+    text-decoration: underline;
+}
+.navBox>span{
+    text-decoration: none;
+}
+/*官方合作*/
+.official {
+    position: relative;
+}
+
+.official:hover .tipBox{
+    display: block;
+}
+
+.official .tipBox {
+    display: none;
+    box-sizing: border-box;
+    width: 122px;
+    position: absolute;
+    left: -50px;
+    top: 22px;
+}
+
+.official .tipBox ul {
+    background: #FFF;
+    border: 1px solid #EBEBEB;
+}
+.official .tipBox ul li {
+    padding: 0 10px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #000;
+}
+
+.official .tipBox ul li:hover {
+    background: #38F;
+    color: #FFF;
+}
+
+.official .tipBox i {
+    /*定位的元素会让标签变为块(行内块)标签*/
+    position: relative;
+    top: 1px;
+    left: 20px;
+    /*让盒子水平居中:块标签左右MARGIN为AUTO（自动一样）*/
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-color: #FFF;
+}
+/*搜索区域*/
+.searchBox{
+    box-sizing: border-box;
+    margin: 180px auto 0 auto;
+    width: 600px;
+}
+.searchBox img{
+    display: block;
+    margin: 0 auto;
+    width: 244px;
+    /*很少给图片设定高度，让其根据宽度自适应，保证图片不变形*/
+}
+.searchBox .form{
+    position: relative;;
+    margin-top: 30px;
+}
+.searchBox .form input{
+    box-sizing: border-box;
+    padding: 0 130px 0 18px;
+    width: 100%;
+    height: 54px;
+    font-size: 14px;
+    color: #FFF;
+    border: 2px solid #FFF;
+    background:rgba(0,0,0,.5);
+}
+.searchBox .form a{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+    /*display:block;*/
+    box-sizing: border-box;
+    width: 65px;
+    height: 20px;
+}
+/*
+    .searchBox .form a:nth-child(1)：找到FORM中第一个子元素，并且需要是A标签才可以
+
+    .searchBox .form a:nth-of-type(1):先找到所有的A，在找到A中的第一个（具备先分组再查找的特点）
+
+*/
+.searchBox .form a:nth-of-type(1){
+    background:url("./image/sczp.png")no-repeat center center;
+    background-size: 21px 20px;
+    right: 65px;
+    border-right: 1px solid #FFF;
+}
+.searchBox .form a:nth-of-type(2){
+    background:url("./image/sousuo.png")no-repeat center center;
+    background-size: 21px 20px;
+}
+/*热门搜索*/
+.searchBox .hot{
+    margin-top: 30px;
+    display:flex;
+    justify-content: center;
+}
+.searchBox .hot a,
+.searchBox .hot span{
+    font-size: 14px;
+    color: white;
+    margin-right: 30px;
+}
+.searchBox .hot a:hover{
+    text-decoration: underline;
+}
+
+.cameraman a,
+.cameraman span{
+    color: white;
+}
+/*== MAIN主体区域 ==*/
+.mainBox {
+    margin: 0 50px;
+}
+.mainBox h2{
+    position: relative;
+    padding:30px 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 22px;
+    font-weight: normal;
+}
+.mainBox h2 .tab{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-size: 0;
+}
+.mainBox h2 .tab a{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 38px;
+    height: 32px;
+    font-size: 16px;
+    color: #D4D4D4;
+}
+.mainBox h2 .tab a .active{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/*图片列表*/
+.imgList{
+
+}
+.imgList ul{
+    margin-bottom: 10px;
+    display: flex;
+}
+.imgList ul li{
+    position: relative;
+    box-sizing: border-box;
+    height: 270px;
+    margin-left: 10px;
+}
+.imgList ul li:nth-of-type(1){
+    margin-left: 0;
+}
+/*图片*/
+.imgList ul li a:nth-of-type(1){
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.imgList ul li a:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+}
+/*作者*/
+.imgList ul li a:nth-of-type(2){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100%;
+    height: 63px;
+    background: rgba(0,0,0,.2);
+}
+.imgList ul li a:nth-of-type(2) img{
+    width: 48px;
+    height: 48px;
+    /*盒子圆角：50%是把正方形变成圆形*/
+    border-radius: 50%;
+    /*让图片和文字都基于中线对齐 top/middle/bottom */
+    vertical-align: middle;
+}
+.imgList ul li a:nth-of-type(2) span{
+    font-size: 14px;
+    color: #FFF;
+    margin-left: 10px;
+    vertical-align: middle;
+}
